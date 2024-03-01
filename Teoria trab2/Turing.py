@@ -58,6 +58,6 @@ with open('entrada.txt', 'r+') as txt:
 
 # Verifica se a Máquina de Turing aceita ou rejeita a entrada
 if initial_state in final_states:
-    print("Aceita")
+    print("1")
 else:
-    print("Rejeita")
+    print("0")

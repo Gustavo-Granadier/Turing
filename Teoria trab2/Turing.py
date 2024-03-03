@@ -1,7 +1,12 @@
 import json
+import sys
+
+argvs = sys.argv
+arquivo1 = argvs[1]
+arquivo2 = argvs[2]
 
 # Abre o arquivo JSON no modo leitura
-with open('JSON.json', 'r') as dados:
+with open(arquivo1, 'r') as dados:
     arq_json = json.load(dados)
 
 initial_state = arq_json["initial"]
@@ -10,7 +15,7 @@ white = arq_json["white"]
 transitions = arq_json["transitions"]
 
 # Abre o arquivo txt no modo leitura e escrita:
-with open('entrada.txt', 'r+') as txt:
+with open(arquivo2, 'r+') as txt:
     # Lê o conteúdo do arquivo para uma lista de caracteres
     entrada = list(txt.read().strip())
 
